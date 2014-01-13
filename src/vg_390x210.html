@@ -1,20 +1,76 @@
+<!doctype html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regexS = "[\\?&#]" + name + "=([^&#]*)",
+                    regex = new RegExp(regexS),
+                    results = regex.exec(window.location.href);
+            if (results === null) {
+                return "";
+            }
+
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        window.onload = function () {
+            document.getElementById("ad").href = "https://www.penger.no/bilforsikring/?WT.mc_id=" + getParameterByName("tag");
+        };
+    </script>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		#ad {
+			background: #d7e8e5 url(gfx/bilforsikring-bg.png) 0px bottom repeat-x;
+			color: #08452c;
+			display: block;
+			font: 16px Helvetica, Arial, sans-serif;
+			overflow: hidden;
+			text-align: center;
+			text-decoration: none;
+			width: 390px;
+			height: 225px;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.title {
+			display: block;
+			font-size: 1.5em;
+			font-weight: 400;
+			margin: 20px 0 10px;
+			text-shadow: 0 1px 1px rgba(255,255,255,.6);
+		}
+
+		.button {
+			background: #66407e;
+			border-radius: 4px;
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+			font-size: 1.2em;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+			display: block;
+			padding: .5em;
+			margin: 0 auto;
+			text-shadow: 0 1px 1px rgba(0,0,0,1);
+			width: 80%;
+		}
+
+		.button:hover {
+			background: #744d8d;
+		}
+
+	</style>
 </head>
-<body style="padding: 0; margin: 15px 0 0;">
-
-	<div style="width: 390px; height: 210px; font-size: 14px; background-color: #fff; text-align: center; font-family: Arial,sans-serif; padding: 0; margin: 0;">
-
-	<a href="https://www.penger.no/boliglan/?WT.mc_id=VG_F_billigboliglan" target="_blank" style="border: 5px solid #000; display: block; color: #000; text-decoration: none; height: 200px; position: relative;">
-		<span style="font-size: 39px; display: block; padding-top: 19px;">Sammenlign boligl&aring;n</span>
-		<br>
-		<span style="display: block; margin-top: 10px; font-size: 18px;">Sjekk renter og sammenlign boligl&aring;n her</span>
-		<br>
-
-		<span style="display: block; position: absolute; bottom: 0px; left: 0px; width: 100%; padding: 10px 0px; background: url(gfx/penger_ad_gradient.png) repeat-x scroll left top #378770;"><img alt="penger.no" src="gfx/penger_ad_logo.png?2013-05-16" style="border: 0px none;"></span>
+<body>
+	
+	<a id="ad" href="https://www.penger.no/bilforsikring/?WT.mc_id=ukjent" target="_blank">
+		<span class="title">Sammenlign priser fra flere<br>forsikringsselskaper samtidig.</span>
+		<span class="button">Bytt bilforsikring i dag - klikk her</span>
 	</a>
-</div>
 
 </body>
 </html>
-
