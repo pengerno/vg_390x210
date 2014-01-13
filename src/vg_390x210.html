@@ -24,11 +24,12 @@
 		}
 
 		#ad {
-			background: #d7e8e5 url(gfx/bilforsikring-bg.png) 0px bottom repeat-x;
+			background: #d7e8e5 url(gfx/bilforsikring-bg.png) left bottom no-repeat;
 			color: #08452c;
 			display: block;
 			font: 16px Helvetica, Arial, sans-serif;
 			overflow: hidden;
+			position: relative;
 			text-align: center;
 			text-decoration: none;
 			width: 390px;
@@ -63,6 +64,12 @@
 			background: #744d8d;
 		}
 
+		.logo {
+			position: absolute;
+			right: 5px;
+			bottom: 5px;
+		}
+
 	</style>
 </head>
 <body>
@@ -70,6 +77,7 @@
 	<a id="ad" href="https://www.penger.no/bilforsikring/?WT.mc_id=ukjent" target="_blank">
 		<span class="title">Sammenlign priser fra flere<br>forsikringsselskaper samtidig.</span>
 		<span class="button">Bytt bilforsikring i dag - klikk her</span>
+		<img class="logo" src="gfx/logo.png">
 	</a>
 
 </body>
